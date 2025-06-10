@@ -31,7 +31,7 @@ useEffect(()=>{
     }
 },[searchQuery])
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+    <nav className="sticky top-0 z-40 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
             <NavLink to='/' onClick={()=>setOpen(false)}>
                 <img className="h-9" src={assets.logo} alt="logo" />
@@ -94,6 +94,16 @@ useEffect(()=>{
             }
                 <NavLink onClick={()=>setOpen(false)}to='/'>Contact</NavLink>
 
+                  <div className="flex items-center w-full border border-gray-300 px-3 py-2 rounded-full mt-2">
+      <input
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="w-full bg-transparent outline-none placeholder-gray-500 text-sm"
+        type="text"
+        placeholder="Search products"
+      />
+      <img src={assets.search_icon} alt='search' className='w-4 h-4 ml-2 opacity-70' />
+    </div>
+
 {!user ?(
     <button onClick={()=>{setOpen(false);setShowUserLogin(true);}}className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
                     Login
@@ -111,3 +121,5 @@ useEffect(()=>{
 }
 
 export default Navbar
+
+
