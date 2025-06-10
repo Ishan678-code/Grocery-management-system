@@ -89,10 +89,8 @@ useEffect(()=>{
                 <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                 <NavLink onClick={()=>setOpen(false)}to='/'>Home</NavLink>
                 <NavLink onClick={()=>setOpen(false)}to='/products'>All Product</NavLink>
-                {user &&
-                <NavLink onClick={()=>setOpen(false)}to='/products'>My Orders</NavLink>
-            }
-                <NavLink onClick={()=>setOpen(false)}to='/'>Contact</NavLink>
+               
+                <NavLink onClick={()=>setOpen(false)}to='/contact'>Contact</NavLink>
 
                   <div className="flex items-center w-full border border-gray-300 px-3 py-2 rounded-full mt-2">
       <input
