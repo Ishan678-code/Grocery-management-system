@@ -41,7 +41,7 @@ useEffect(()=>{
             <div className="hidden sm:flex items-center gap-8">
                <NavLink to='/'>Home</NavLink>
                <NavLink to='/products'>All Product</NavLink>
-               <NavLink to='/contact'>Contact</NavLink>
+               
                
 
                 <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
@@ -90,7 +90,7 @@ useEffect(()=>{
                 <NavLink onClick={()=>setOpen(false)}to='/'>Home</NavLink>
                 <NavLink onClick={()=>setOpen(false)}to='/products'>All Product</NavLink>
                
-                <NavLink onClick={()=>setOpen(false)}to='/contact'>Contact</NavLink>
+               
 
                   <div className="flex items-center w-full border border-gray-300 px-3 py-2 rounded-full mt-2">
       <input
